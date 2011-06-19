@@ -1,0 +1,9 @@
+========================================================================================================================
+Spring in Practice Top-Level POM
+
+Copyright (c) 2008-2011 Manning Publications Co.
+
+Willie Wheeler (willie.wheeler@gmail.com)
+========================================================================================================================
+
+This is the top-level POM for Spring in Practice. All of the code examples in the book derive from this POM.

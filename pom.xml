@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+========================================================================================================================
+pom.xml
+
+Copyright (c) 2008-2011 Manning Publications Co.
+
+Willie Wheeler (willie.wheeler@gmail.com)
+
+Spring in Practice top-level POM. Chapter-specific POMs must define the chapter.number property.
+========================================================================================================================
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	
+	
+	<!-- ================================================================== -->
+	<!-- Overview                                                           -->
+	<!-- ================================================================== -->
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>com.springinpractice</groupId>
+	<artifactId>com.springinpractice.top</artifactId>
+	<version>1.0-RELEASE</version>
+	<packaging>pom</packaging>
+	
+	<name>Spring in Practice Top POM</name>
+	<description>Top POM for deriving all of the other POMs.</description>
+	<url>http://springinpractice.com/</url>
+	
+	<properties>
+		<spring.version>3.0.5.RELEASE</spring.version>
+		<spring.integration.version>2.0.4.RELEASE</spring.integration.version>
+		<spring.security.version>3.0.3.RELEASE</spring.security.version>
+		<aspectj.version>1.6.8.RELEASE</aspectj.version>
+		<slf4j.version>1.5.10</slf4j.version>
+		<javamail.version>1.4.1</javamail.version>
+		
+		<!-- Prevent chirping about platform-dependent builds. -->
+		<!-- See http://docs.codehaus.org/display/MAVENUSER/POM+Element+for+Source+File+Encoding -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+	
+	
+	<!-- ================================================================== -->
+	<!-- Dependencies                                                       -->
+	<!-- ================================================================== -->
+	
+	<!-- Manage dependency versions and scopes centrally -->
+	<dependencyManagement>
+		<dependencies>
+			
+			<!-- JavaEE dependencies -->
+			<dependency>
+				<groupId>javax.annotation</groupId>
+				<artifactId>com.springsource.javax.annotation</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.inject</groupId>
+				<artifactId>com.springsource.javax.inject</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.mail</groupId>
+				<artifactId>com.springsource.javax.mail</artifactId>
+				<version>${javamail.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.persistence</groupId>
+				<artifactId>com.springsource.javax.persistence</artifactId>
+				<version>2.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.transaction</groupId>
+				<artifactId>com.springsource.javax.transaction</artifactId>
+				<version>1.1.0</version>
+				<scope>runtime</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>com.springsource.javax.servlet</artifactId>
+				<version>2.5.0</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>com.springsource.javax.servlet.jsp</artifactId>
+				<version>2.1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>com.springsource.javax.servlet.jsp.jstl</artifactId>
+				<version>1.2.0</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.validation</groupId>
+				<artifactId>com.springsource.javax.validation</artifactId>
+				<version>1.0.0.GA</version>
+			</dependency>
+			
+			<!-- Apache dependencies -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>com.springsource.org.apache.commons.codec</artifactId>
+				<version>1.4.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>com.springsource.org.apache.commons.dbcp</artifactId>
+				<version>1.2.2.osgi</version>
+				<scope>runtime</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>com.springsource.org.apache.commons.fileupload</artifactId>
+				<version>1.2.1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>com.springsource.org.apache.commons.httpclient</artifactId>
+				<version>3.1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>com.springsource.org.apache.commons.io</artifactId>
+				<version>1.4.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>com.springsource.org.apache.commons.lang</artifactId>
+				<version>2.4.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>com.springsource.org.apache.commons.logging</artifactId>
+				<version>1.1.1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.velocity</groupId>
+				<artifactId>com.springsource.org.apache.velocity</artifactId>
+				<version>1.6.2</version>
+			</dependency>
+			
+			<!-- Spring dependencies -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>org.springframework.core</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>org.springframework.aspects</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>org.springframework.beans</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>org.springframework.context</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>org.springframework.context.support</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>org.springframework.orm</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>org.springframework.oxm</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>org.springframework.transaction</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>org.springframework.web</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>org.springframework.web.servlet</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			
+			<!-- Spring Integration dependencies -->
+			<!--
+			<dependency>
+				<groupId>org.springframework.integration</groupId>
+				<artifactId>org.springframework.integration</artifactId>
+				<version>${spring.integration.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.integration</groupId>
+				<artifactId>org.springframework.integration.http</artifactId>
+				<version>${spring.integration.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.integration</groupId>
+				<artifactId>org.springframework.integration.mail</artifactId>
+				<version>${spring.integration.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.integration</groupId>
+				<artifactId>org.springframework.integration.ws</artifactId>
+				<version>${spring.integration.version}</version>
+			</dependency>
+			-->
+			
+			<dependency>
+				<groupId>org.springframework.integration</groupId>
+				<artifactId>spring-integration-core</artifactId>
+				<version>${spring.integration.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.integration</groupId>
+				<artifactId>spring-integration-http</artifactId>
+				<version>${spring.integration.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.integration</groupId>
+				<artifactId>spring-integration-mail</artifactId>
+				<version>${spring.integration.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.integration</groupId>
+				<artifactId>spring-integration-xmpp</artifactId>
+				<version>${spring.integration.version}</version>
+			</dependency>
+<!-- 			<dependency> -->
+<!-- 				<groupId>org.springframework.integration</groupId> -->
+<!-- 				<artifactId>spring-integration-ws</artifactId> -->
+<!-- 				<version>${spring.integration.version}</version> -->
+<!-- 			</dependency> -->
+		
+			<!-- Spring Security dependencies -->
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>org.springframework.security.acls</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>org.springframework.security.config</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>org.springframework.security.core</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>org.springframework.security.taglibs</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>org.springframework.security.web</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+			
+			<!-- Spring Web Services dependencies -->
+			<dependency>
+				<groupId>org.springframework.ws</groupId>
+				<artifactId>org.springframework.ws</artifactId>
+				<version>1.5.9.A</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.springframework.ws</groupId>
+						<artifactId>org.springframework.oxm</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<!-- AspectJ dependencies -->
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>com.springsource.org.aspectj.runtime</artifactId>
+				<version>${aspectj.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>com.springsource.org.aspectj.weaver</artifactId>
+				<version>${aspectj.version}</version>
+			</dependency>
+
+			<!-- Hibernate dependencies -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>com.springsource.org.hibernate</artifactId>
+				<version>3.3.2.GA</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>com.springsource.org.hibernate.annotations</artifactId>
+				<version>3.4.0.GA</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>com.springsource.org.hibernate.search</artifactId>
+				<version>3.1.1.GA</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>com.springsource.org.hibernate.validator</artifactId>
+				<version>4.1.0.GA</version>
+			</dependency>
+			
+			<!-- Data dependencies -->
+			<dependency>
+				<groupId>com.mysql.jdbc</groupId>
+				<artifactId>com.springsource.com.mysql.jdbc</artifactId>
+				<version>5.1.6</version>
+				<scope>runtime</scope>
+			</dependency>
+			
+			<!-- Logging dependencies -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>com.springsource.slf4j.api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>com.springsource.slf4j.log4j</artifactId>
+				<version>${slf4j.version}</version>
+				<scope>runtime</scope>
+			</dependency>
+			
+			<!-- Test dependencies -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>org.springframework.test</artifactId>
+				<version>${spring.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.junit</groupId>
+				<artifactId>com.springsource.org.junit</artifactId>
+				<version>4.8.1</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>com.springsource.org.mockito</artifactId>
+				<version>1.8.4</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.hsqldb</groupId>
+				<artifactId>com.springsource.org.hsqldb</artifactId>
+				<version>1.8.0.10</version>
+				<scope>test</scope>
+			</dependency>
+			
+			<!-- Other dependencies -->
+			<dependency>
+				<groupId>com.opensymphony.sitemesh</groupId>
+				<artifactId>com.springsource.com.opensymphony.sitemesh</artifactId>
+				<version>2.4.1</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sun.syndication</groupId>
+				<artifactId>com.springsource.com.sun.syndication</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>net.sourceforge.cglib</groupId>
+				<artifactId>com.springsource.net.sf.cglib</artifactId>
+				<version>2.2.0</version>
+				<scope>runtime</scope>
+			</dependency>
+			<dependency>
+				<groupId>net.sourceforge.ehcache</groupId>
+				<artifactId>com.springsource.net.sf.ehcache</artifactId>
+				<version>1.6.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.joda</groupId>
+				<artifactId>com.springsource.org.joda.time</artifactId>
+				<version>1.6.0</version>
+			</dependency>
+			
+			<!-- This one comes out of repo1 -->
+			<dependency>
+				<groupId>net.tanesha.recaptcha4j</groupId>
+				<artifactId>recaptcha4j</artifactId>
+				<version>0.0.7</version>
+			</dependency>
+			
+			<!-- This comes from the sourceforge repo -->
+			<dependency>
+				<groupId>net.sourceforge.htmlcleaner</groupId>
+				<artifactId>htmlcleaner</artifactId>
+				<version>2.1</version>
+			</dependency> 
+		</dependencies>
+	</dependencyManagement>
+	
+	<!-- Declare the actual dependencies -->
+	<dependencies>
+		
+		<!-- JavaEE dependencies -->
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>com.springsource.javax.inject</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>com.springsource.javax.validation</artifactId>
+		</dependency>
+		
+		<!-- Apache dependencies -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>com.springsource.org.apache.commons.logging</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>com.springsource.org.apache.commons.lang</artifactId>
+		</dependency>
+		
+		<!-- Spring dependencies -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.aspects</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.beans</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.context</artifactId>
+		</dependency>
+		
+		<!-- Hibernate dependencies -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>com.springsource.org.hibernate.validator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>com.springsource.org.hibernate.search</artifactId>
+		</dependency>
+		
+		<!-- Logging dependencies -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>com.springsource.slf4j.api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>com.springsource.slf4j.log4j</artifactId>
+		</dependency>
+		
+		<!-- Test dependencies -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.test</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.junit</groupId>
+			<artifactId>com.springsource.org.junit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>com.springsource.org.mockito</artifactId>
+		</dependency>
+	</dependencies>
+	
+	
+	<!-- ================================================================== -->
+	<!-- Build                                                              -->
+	<!-- ================================================================== -->
+	
+	<build>
+	
+		<!-- Manage plug-in versions and configuration centrally -->
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>2.3</version>
+					<configuration>
+					
+						<!-- Note: Moved these out of compilerArguments -->
+						<source>1.6</source>
+						<target>1.6</target>
+						
+						<compilerArguments>
+							<verbose />
+						</compilerArguments>
+					</configuration>
+				</plugin>
+				
+				<!-- Add integration test directories -->
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>build-helper-maven-plugin</artifactId>
+					<version>1.5</version>
+					<executions>
+						<execution>
+							<id>add-it-source</id>
+							<goals>
+								<goal>add-test-source</goal>
+							</goals>
+							<configuration>
+								<sources>
+									<source>src/it/java</source>
+								</sources>
+							</configuration>
+						</execution>
+						<execution>
+							<id>add-it-resource</id>
+							<goals>
+								<goal>add-test-resource</goal>
+							</goals>
+							<configuration>
+								<resources>
+									<resource>
+										<directory>src/it/resources</directory>
+									</resource>
+								</resources>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+				
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.5</version>
+					<configuration>
+						<includes>
+							<include>**/*Tests.java</include>
+						</includes>
+						
+						<!-- Required because SpringSource EBR renames testing artifact. -->
+						<!-- See https://issuetracker.springsource.com/browse/EBR-220 -->
+						<junitArtifactName>org.junit:com.springsource.org.junit</junitArtifactName>
+					</configuration>
+				</plugin>
+				
+				<!-- Support integration testing -->
+				<plugin>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<version>2.5</version>
+					<configuration>
+						<!-- This entry is required because of renamed testing artifact -->
+						<!-- See https://issuetracker.springsource.com/browse/EBR-220 -->
+						<junitArtifactName>org.junit:com.springsource.org.junit</junitArtifactName>
+					</configuration>
+					<executions>
+						<execution>
+							<id>integration-test</id>
+							<goals>
+								<goal>integration-test</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>verify</id>
+							<goals>
+								<goal>verify</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			
+				<plugin>
+					<groupId>org.mortbay.jetty</groupId>
+					<artifactId>maven-jetty-plugin</artifactId>
+					<version>6.1.21</version>
+					<configuration>
+						<scanIntervalSeconds>10</scanIntervalSeconds>
+						<webAppConfig>
+							<contextPath>/sip</contextPath>
+							<extraClasspath>${sip.conf.dir}/sip${chapter.number}/classes</extraClasspath>
+						</webAppConfig>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		
+		<!-- Declare the actual plug-ins -->
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+	
+	
+	<!-- ================================================================== -->
+	<!-- Repositories                                                       -->
+	<!-- ================================================================== -->
+	
+	<repositories>
+		<repository>
+			<id>repository.springframework.maven.release</id>
+			<name>Spring Framework Maven Release Repository</name>
+			<url>http://maven.springframework.org/release</url>
+		</repository> 
+		<repository>
+			<id>repository.springframework.maven.external</id>
+			<name>Spring Framework Maven External Repository</name>
+			<url>http://maven.springframework.org/external</url>
+		</repository>
+		
+		<!-- Legacy -->
+		<!--
+		<repository>
+			<id>com.springsource.repository.bundles.external</id>
+			<name>SpringSource EBR - External</name>
+			<url>http://repository.springsource.com/maven/bundles/external</url>
+		</repository>
+		<repository>
+			<id>com.springsource.repository.bundles.release</id>
+			<name>SpringSource EBR - Release</name>
+			<url>http://repository.springsource.com/maven/bundles/release</url>
+		</repository>
+		-->
+		
+		<!-- JBoss/Hibernate dependencies (more up-to-date than SpringSource EBR) -->
+		<!--
+		<repository>
+			<id>repository.jboss.org</id>
+			<name>Public JBoss Repository Group</name>
+			<url>https://repository.jboss.org/nexus/content/groups/public-jboss</url>
+		</repository>
+		-->
+		
+		<!-- htmlcleaner dependency (chapter 9) -->
+		<repository>
+			<id>sourceforce</id>
+			<url>http://maven.xwiki.org/externals/</url>
+		</repository>
+    </repositories>
+    
+	
+	<!-- ================================================================== -->
+	<!-- Developers                                                         -->
+	<!-- ================================================================== -->
+	
+	<developers>
+		<developer>
+			<id>williewheeler</id>
+			<name>Willie Wheeler</name>
+			<email>willie.wheeler@gmail.com</email>
+			<url>http://wheelersoftware.com/</url>
+		</developer>
+		<developer>
+			<id>johnwheeler</id>
+			<name>John Wheeler</name>
+			<email>jwheeler1@gmail.com</email>
+		</developer>
+	</developers>
+</project>
