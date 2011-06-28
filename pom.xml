@@ -45,6 +45,10 @@ Spring in Practice top-level POM. Chapter-specific POMs must define the chapter.
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 	
+	<modules>
+		<module>hibernate</module>
+	</modules>
+	
 	
 	<!-- ================================================================== -->
 	<!-- Dependencies                                                       -->
