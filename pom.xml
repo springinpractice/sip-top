@@ -47,6 +47,7 @@ Spring in Practice top-level POM. Chapter-specific POMs must define the chapter.
 	
 	<modules>
 		<module>hibernate</module>
+		<module>web</module>
 	</modules>
 	
 	

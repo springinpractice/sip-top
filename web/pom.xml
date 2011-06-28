@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+===============================================================================
+$Id: pom.xml 8 2011-02-01 08:24:14Z  $
+
+Copyright (c) 2010 Manning Publications Co.
+
+Willie Wheeler (willie.wheeler@gmail.com)
+
+Book web site   - http://www.manning.com/wheeler/
+Book blog       - http://springinpractice.com/
+Author web site - http://wheelersoftware.com/
+===============================================================================
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	
+	
+	<!-- ================================================================== -->
+	<!-- Overview                                                           -->
+	<!-- ================================================================== -->
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>com.springinpractice</groupId>
+		<artifactId>com.springinpractice.top</artifactId>
+		<version>1.0-RELEASE</version>
+	</parent>
+	
+	<artifactId>com.springinpractice.deps-web</artifactId>
+	<packaging>pom</packaging>
+	
+	<name>Spring in Practice Web POM</name>
+	<description>POM to group Spring Web MVC and related dependencies.</description>
+	<url>http://springinpractice.com/</url>
+	
+	
+	<!-- ================================================================== -->
+	<!-- Dependencies                                                       -->
+	<!-- ================================================================== -->
+	
+	<dependencies>
+	
+		<!-- JavaEE dependencies -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>com.springsource.javax.servlet</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>com.springsource.javax.servlet.jsp</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>com.springsource.javax.servlet.jsp.jstl</artifactId>
+		</dependency>
+		
+		<!-- Spring dependencies -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.web.servlet</artifactId>
+		</dependency>
+		
+		<!-- Sitemesh dependency -->
+		<dependency>
+			<groupId>com.opensymphony.sitemesh</groupId>
+			<artifactId>com.springsource.com.opensymphony.sitemesh</artifactId>
+		</dependency>
+	</dependencies>
+</project>
