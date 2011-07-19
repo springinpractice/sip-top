@@ -170,7 +170,7 @@ td {
 /* FORMS ============================================================================================================ */
 
 form.panel {
-	margin: 20px 0;
+	margin: 30px 0;
 	padding: 10px 40px;
 /* 	background-color: #A3A88C; */
 	background-color: #C6CCA9;
@@ -184,8 +184,8 @@ form.panel {
 	-webkit-box-shadow: 0 5px 10px #666;
 	box-shadow: 0 5px 10px #666;
 	
- 	background: -moz-linear-gradient(100% 100% 90deg, #C6CCA9, #A3A88C);
- 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#A3A88C), to(#C6CCA9));
+/*  	background: -moz-linear-gradient(100% 100% 90deg, #C6CCA9, #A3A88C); */
+/*  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#A3A88C), to(#C6CCA9)); */
 }
 
 .panel .formItem {
