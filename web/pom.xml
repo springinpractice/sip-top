@@ -30,8 +30,8 @@ Author web site - http://wheelersoftware.com/
 		<version>1.0-RELEASE</version>
 	</parent>
 	
-	<artifactId>com.springinpractice.deps-web</artifactId>
-	<packaging>pom</packaging>
+	<artifactId>com.springinpractice.web</artifactId>
+	<packaging>war</packaging>
 	
 	<name>Spring in Practice Web POM</name>
 	<description>POM to group Spring Web MVC and related dependencies.</description>
