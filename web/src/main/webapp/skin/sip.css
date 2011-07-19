@@ -1,0 +1,293 @@
+/* Theme: http://kuler.adobe.com/#themeID/1404559 */
+
+html {
+	background-color: #D9C473;
+	color: #000;
+}
+
+body {
+	margin: 0;
+    line-height: 1.5;
+}
+
+#doc3 {
+	margin: 0;
+}
+
+
+/* REGIONS ========================================================================================================== */
+
+#outerHdSubhd {
+    padding-bottom: 40px;
+    background-color: #FFF;
+	font-size: 123.1%;
+}
+
+#innerHdSubhd {
+	-moz-box-shadow: 0 2px 5px #999;
+	-webkit-box-shadow: 0 2px 5px #999;
+	box-shadow: 0 2px 5px #666;
+}
+
+#hd, #subhd, #bd, #ft {
+	font-family: Lucida Grande, sans-serif;
+}
+
+#hd {
+	padding: 15px 20px 10px;
+	background-color: #537A8A;
+	color: #FFF;
+}
+
+#hdTitle {
+	position: relative;
+	left: 2px;
+	width: 140px;
+	height: 17px;
+	background: url(images/sip-title.png) no-repeat;
+}
+
+#hdAppName {
+	font-size: 250%;
+}
+
+#subhd {
+    border-top: 1px solid #333;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #EEE;
+	background: -moz-linear-gradient(100% 100% 90deg, #333, #555);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#555), to(#333));
+}
+
+#subhd a {
+    color: #FFF;
+}
+
+#subhd input {
+	border: 1px solid #000;
+	padding: 2px;
+	background-color: #FFF;
+	font-family: Lucida Grande, sans-serif;
+}
+
+#subhd input[type="submit"] {
+	border: 0;
+	padding: 2px 5px;
+	background-color: #666;
+	font-weight: bold;
+	color: #FFF;
+
+	background: -moz-linear-gradient(100% 100% 90deg, #666, #888);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#888), to(#666));
+	
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#bd {
+	padding: 1px 0 40px;
+	background-color: #FFF;
+	font-size: 123.1%;
+	color: #333;
+}
+
+#ft {
+	border-top: 4px solid #B59A2B;
+	text-align: left;
+	font-size: 108%;
+	color: #333;
+}
+
+#ft a {
+    color: #000;
+}
+
+#aboutRecipe {
+}
+
+#bookLinks {
+    text-align: right;
+}
+
+#legal {
+	margin: 40px 0;
+    text-align: center;
+}
+
+.regionInner {
+	width: 720px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+#topNav {
+    text-align: left;
+}
+
+#sessionInfo {
+    text-align: right;
+}
+
+
+/* HEADERS ========================================================================================================== */
+
+h1 {
+    margin-top: 0;
+	color: #333;
+}
+
+
+/* LINKS ============================================================================================================ */
+
+a {
+	color: #1C6A8A;
+}
+
+
+/* TABLES =========================================================================================================== */
+
+table {
+	width: 100%;
+}
+
+th {
+	background-color: #A3A88C;
+	border: 0;
+	text-align: left;
+	font-weight: normal;
+	
+	background: -moz-linear-gradient(100% 100% 90deg, #A3A88C, #C6CCA9);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#C6CCA9), to(#A3A88C));
+}
+
+td {
+	border: 0;
+	border-bottom: 1px solid #A3A88C;
+}
+
+/* FORMS ============================================================================================================ */
+
+form.panel {
+	margin: 20px 0;
+	padding: 10px 40px;
+/* 	background-color: #A3A88C; */
+	background-color: #C6CCA9;
+	color: #000;
+	
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	
+	-moz-box-shadow: 0 5px 10px #666;
+	-webkit-box-shadow: 0 5px 10px #666;
+	box-shadow: 0 5px 10px #666;
+	
+ 	background: -moz-linear-gradient(100% 100% 90deg, #C6CCA9, #A3A88C);
+ 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#A3A88C), to(#C6CCA9));
+}
+
+.panel .formItem {
+	margin: 20px 0;
+}
+
+.panel .formItem.submit {
+	text-align: left;
+}
+
+.panel input, .panel textarea {
+	border: 1px solid #666;
+	padding: 2px;
+	background-color: #FFF;
+	font-family: Lucida Grande, sans-serif;
+}
+
+.panel input.short {
+	width: 240px;
+}
+
+.panel input.medium {
+	width: 480px;
+}
+
+.panel input.long, .panel textarea {
+	width: 640px;
+}
+
+.panel input:focus, .panel textarea:focus {
+/*	background-color: #FFC;*/
+}
+
+.panel input[type="submit"], .panel input[type="reset"] {
+	border: 0;
+	padding: 10px 20px;
+	background-color: #333;
+	font-weight: bold;
+	color: #FFF;
+	
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	
+	background: -moz-linear-gradient(100% 100% 90deg, #333, #555);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#555), to(#333));
+}
+
+.panel .warningMessage {
+	padding-left: 20px;
+	background: url(icons/error.png) left no-repeat;
+}
+
+.panel .fieldError {
+	margin-top: 5px;
+	padding-left: 20px;
+	background: url(icons/error.png) left no-repeat;
+}
+
+.warningBox {
+	margin: 20px 0;
+	padding: 20px 20px 20px 40px;
+	background: #333 url(icons/error.png) 15px 22px no-repeat;
+	color: #EEE;
+	
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	
+	-moz-box-shadow: 0 5px 10px #666;
+	-webkit-box-shadow: 0 5px 10px #666;
+	box-shadow: 0 5px 10px #666;
+}
+
+
+/* ICONS ============================================================================================================ */
+
+.icon {
+	padding-left: 20px;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+
+.add.icon {
+	background-image: url(icons/add.png);
+}
+
+.email.icon {
+	background-image: url(icons/email.png);
+}
+
+.table.icon {
+	background-image: url(icons/table.png);
+}
+
+.user.icon {
+	background-image: url(icons/user.png);
+}
+
+
+/* EXTRAS =========================================================================================================== */
+
+.actionBar {
+	margin: 20px 0;
+}

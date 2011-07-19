@@ -9,17 +9,19 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 <c:set var="baseGoogleUrl" value="http://ajax.googleapis.com/ajax/libs" />
-<c:set var="baseSipUrl" value="http://sipskin.s3.amazonaws.com" />
-<c:set var="sipBookCoverUrl" value="http://sipskin.s3.amazonaws.com/images/sipcover.jpg" />
+
+<c:url var="sipCssUrl" value="/skin/sip.css" />
+<c:url var="sipJsUrl" value="/skin/sip.js" />
+<c:url var="sipCoverImgUrl" value ="/skin/images/sipcover.jpg" />
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title><decorator:title /> - Spring in Practice</title>
 		<link rel="stylesheet" type="text/css" href="${baseGoogleUrl}/yui/2.9.0/build/reset-fonts-grids/reset-fonts-grids.css" />
 		<link rel="stylesheet" type="text/css" href="${baseGoogleUrl}/yui/2.9.0/build/base/base.css" />
-		<link rel="stylesheet" type="text/css" href="${baseSipUrl}/sip.css" />
+		<link rel="stylesheet" type="text/css" href="${sipCssUrl}" />
 		<script type="text/javascript" src="${baseGoogleUrl}/jquery/1.6.1/jquery.min.js"></script>
-		<script type="text/javascript" src="${baseSipUrl}/sip.js"></script>
+		<script type="text/javascript" src="${sipJsUrl}"></script>
 		<decorator:head />
 	</head>
 	<body>
@@ -48,7 +50,7 @@
 							<div><c:out value="${initParam.aboutThisRecipe}" escapeXml="false" /></div>
 						</div>
 						<div id="bookLinks" class="yui-u">
-							<div><a href="http://www.manning.com/wheeler/"><img id="book" src="${sipBookCoverUrl}" alt="Spring in Practice" /></a></div>
+							<div><a href="http://www.manning.com/wheeler/"><img id="book" src="${sipCoverImgUrl}" alt="Spring in Practice" /></a></div>
 							<div>
 								<a href="http://www.manning.com/wheeler/" title="Discuss the book with the authors and other readers">Spring in Practice @ Manning</a><br />
 								<a href="http://springinpractice.com/" title="The book's blog, with elaborations, corrections and more">Spring in Practice Blog</a><br />
