@@ -17,11 +17,6 @@ Author web site - http://wheelersoftware.com/
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	
-	
-	<!-- ================================================================== -->
-	<!-- Overview                                                           -->
-	<!-- ================================================================== -->
-	
 	<modelVersion>4.0.0</modelVersion>
 	
 	<parent>
@@ -30,17 +25,12 @@ Author web site - http://wheelersoftware.com/
 		<version>1.0-RELEASE</version>
 	</parent>
 	
-	<artifactId>com.springinpractice.web</artifactId>
-	<packaging>war</packaging>
+	<artifactId>com.springinpractice.deps-web</artifactId>
+	<packaging>pom</packaging>
 	
 	<name>Spring in Practice Web POM</name>
 	<description>POM to group Spring Web MVC and related dependencies.</description>
 	<url>http://springinpractice.com/</url>
-	
-	
-	<!-- ================================================================== -->
-	<!-- Dependencies                                                       -->
-	<!-- ================================================================== -->
 	
 	<dependencies>
 	
