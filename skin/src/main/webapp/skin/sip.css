@@ -1,5 +1,7 @@
+/* Theme: http://kuler.adobe.com/#themeID/1404559 */
+
 html {
-	background-color: #DDD;
+	background-color: #D9C473;
 	color: #000;
 }
 
@@ -104,7 +106,7 @@ ul#breadcrumbs > li:after {
 }
 
 #ft {
-	border-top: 4px solid #999;
+	border-top: 4px solid #B59A2B;
 	text-align: left;
 	font-size: 108%;
 	color: #333;
@@ -273,7 +275,7 @@ form[name="f"] table td {
 .panel {
 	margin: 20px 0;
 	border: 1px solid #AAA;
-	background-color: #FFE;
+/* 	background-color: #FFE; */
 	color: #000;
 	
 	-moz-border-radius: 10px;
