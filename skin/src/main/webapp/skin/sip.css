@@ -292,3 +292,8 @@ td {
 .actionBar {
 	margin: 20px 0;
 }
+
+/* Login form */
+form[name="f"] table td {
+	border: 0;
+}
