@@ -1,0 +1,43 @@
+<%-- Icon license: http://pcunleashed.com/download/icon-sets/ --%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<c:url var="booksIconUrl" value="/extras/images/books.png" />
+<c:url var="laptopIconUrl" value="/extras/images/laptop.png" />
+<c:url var="guitarIconUrl" value="/extras/images/guitar.png" />
+
+<div class="photoPanel yui-gb">
+	<div class="yui-u first">
+		<div class="photoItem">
+			<div class="photoItemPhoto"><img src="${booksIconUrl}" /></div>
+			<div class="photoItemTitle">Study</div>
+			<div class="photoItemText">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vulputate ligula a orci rhoncus
+				sodales. Integer vel lacus a lectus pulvinar sollicitudin. Praesent hendrerit tempor diam, at
+				tempus tellus accumsan et.</p>
+			</div>
+		</div>
+	</div>
+	<div class="yui-u">
+		<div class="photoItem">
+			<div class="photoItemPhoto"><img src="${laptopIconUrl}" /></div>
+			<div class="photoItemTitle">Work</div>
+			<div class="photoItemText">
+				<p>Aliquam ullamcorper nisl sit amet augue vulputate sit amet tempus enim fermentum. Proin lorem
+				tellus, scelerisque non gravida sit amet, lacinia sed libero. Quisque bibendum justo porttitor
+				enim egestas non semper lacus cursus.</p>
+			</div>
+		</div>
+	</div>
+	<div class="yui-u">
+		<div class="photoItem">
+			<div class="photoItemPhoto"><img src="${guitarIconUrl}" /></div>
+			<div class="photoItemTitle">Play</div>
+			<div class="photoItemText">
+				<p>Proin lorem tellus, scelerisque non gravida sit amet, lacinia sed libero. Quisque bibendum
+				justo porttitor enim egestas non semper lacus cursus. Praesent non euismod nunc. Quisque in
+				pharetra leo.</p>
+			</div>
+		</div>
+	</div>
+</div>
