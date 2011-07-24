@@ -1,8 +1,8 @@
 /* Theme: http://kuler.adobe.com/#themeID/1404559 */
 
 html {
-	background-color: #D9C473;
-	color: #000;
+/* 	background-color: #D9C473; */
+	background-color: #555;
 }
 
 body {
@@ -99,6 +99,7 @@ ul#breadcrumbs {
 
 ul#breadcrumbs > li {
 	display: inline;
+	list-style-type: none;
 }
 
 ul#breadcrumbs > li:after {
@@ -106,17 +107,22 @@ ul#breadcrumbs > li:after {
 }
 
 #ft {
-	border-top: 4px solid #B59A2B;
+/* 	border-top: 4px solid #B59A2B; */
+	border-top: 4px solid #333;
 	text-align: left;
 	font-size: 108%;
-	color: #333;
+	color: #EEE;
 }
 
 #ft a {
-    color: #000;
+	color: #FFF;
 }
 
 #aboutRecipe {
+}
+
+#bookImg {
+	border: 1px solid #EEE;
 }
 
 #bookLinks {
@@ -158,6 +164,13 @@ a {
 }
 
 
+/* LISTS ============================================================================================================ */
+
+li {
+	list-style-type: disc;
+}
+
+
 /* TABLES =========================================================================================================== */
 
 .tableActionBar {
@@ -188,42 +201,15 @@ td {
 /* FORMS ============================================================================================================ */
 
 input, textarea {
-	font-family: Lucida Grande, sans-serif;
-}
-
-.panel .formItem {
-	margin: 20px 0;
-}
-
-.panel .formItem.submit {
-	text-align: left;
-}
-
-.panel input, .panel textarea {
 	border: 1px solid #666;
 	padding: 2px;
 	background-color: #FFF;
+	font-family: Lucida Grande, sans-serif;
 }
 
-.panel input.short {
-	width: 240px;
-}
-
-.panel input.medium {
-	width: 480px;
-}
-
-.panel input.long, .panel textarea {
-	width: 640px;
-}
-
-.panel input:focus, .panel textarea:focus {
-/*	background-color: #FFC;*/
-}
-
-.panel input[type="submit"], .panel input[type="reset"] {
+input[type="submit"], input[type="reset"] {
 	border: 0;
-	padding: 10px 20px;
+	padding: 5px 15px;
 	background-color: #333;
 	background: -moz-linear-gradient(100% 100% 90deg, #333, #555);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#555), to(#333));
@@ -235,12 +221,32 @@ input, textarea {
 	border-radius: 10px;
 }
 
-.panel .warningMessage {
+input.short {
+	width: 240px;
+}
+
+input.medium {
+	width: 480px;
+}
+
+input.long, textarea {
+	width: 560px;
+}
+
+textarea {
+	height: 200px;
+}
+
+input:focus, textarea:focus {
+	background-color: #FFE;
+}
+
+.warningMessage {
 	padding-left: 20px;
 	background: url(icons/error.png) left no-repeat;
 }
 
-.panel .fieldError {
+.fieldError {
 	margin-top: 5px;
 	padding-left: 20px;
 	background: url(icons/error.png) left no-repeat;
@@ -258,7 +264,7 @@ form[name="f"] table td {
 }
 
 .grid > .gridRow {
-	margin: 10px 0;
+	margin: 15px 0;
 }
 
 .grid > .gridRow:first-child {
@@ -274,17 +280,30 @@ form[name="f"] table td {
 
 .panel {
 	margin: 20px 0;
-	border: 1px solid #AAA;
-/* 	background-color: #FFE; */
+	padding: 20px;
+/* 	background-color: #D9C473; */
+	background-color: #EEE;
 	color: #000;
 	
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
+	
+	-moz-box-shadow: 0 2px 5px #666;
+	-webkit-box-shadow: 0 2px 5px #666;
+	box-shadow: 0 2px 5px #666;
 }
 
-.panelBody {
-	padding: 30px 20px;
+.pane {
+	margin: 20px 0;
+	border: 1px solid #AAA;
+	padding: 20px;
+	background-color: #FFF;
+	color: #000;
+	
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
 }
 
 ul.actionBar {
@@ -310,6 +329,7 @@ ul.actionBar > li:first-child {
 ul.actionBar > li {
 	margin-left: 15px;
 	display: inline;
+	list-style-type: none;
 }
 
 ul.actionBar a {

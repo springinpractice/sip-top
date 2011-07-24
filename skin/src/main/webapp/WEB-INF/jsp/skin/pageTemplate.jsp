@@ -50,7 +50,7 @@
 							<div><c:out value="${initParam.aboutThisRecipe}" escapeXml="false" /></div>
 						</div>
 						<div id="bookLinks" class="yui-u">
-							<div><a href="http://www.manning.com/wheeler/"><img id="book" src="${sipCoverImgUrl}" alt="Spring in Practice" /></a></div>
+							<div><a href="http://www.manning.com/wheeler/"><img id="bookImg" src="${sipCoverImgUrl}" alt="Spring in Practice" /></a></div>
 							<div>
 								<a href="http://www.manning.com/wheeler/" title="Discuss the book with the authors and other readers">Spring in Practice @ Manning</a><br />
 								<a href="http://springinpractice.com/" title="The book's blog, with elaborations, corrections and more">Spring in Practice Blog</a><br />
