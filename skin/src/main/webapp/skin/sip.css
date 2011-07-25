@@ -1,8 +1,7 @@
 /* Theme: http://kuler.adobe.com/#themeID/1404559 */
 
 html {
-/* 	background-color: #D9C473; */
-	background-color: #555;
+	background-color: #7C868A;
 }
 
 body {
@@ -19,7 +18,7 @@ body {
 
 #outerHdSubhd {
     padding-bottom: 30px;
-    background-color: #FFF;
+    background-color: #F8F8F8;
 	font-size: 123.1%;
 }
 
@@ -87,7 +86,7 @@ body {
 
 #bd {
 	padding: 1px 0 40px;
-	background-color: #FFF;
+	background-color: #F8F8F8;
 	font-size: 123.1%;
 	color: #333;
 }
@@ -107,14 +106,13 @@ ul#breadcrumbs > li:after {
 }
 
 #ft {
-/* 	border-top: 4px solid #B59A2B; */
-	border-top: 4px solid #333;
+	border-top: 4px solid #505759;
 	text-align: left;
 	font-size: 108%;
-	color: #EEE;
+	color: #E5F8FF;
 }
 
-#ft a {
+#ft h2, #ft a {
 	color: #FFF;
 }
 
@@ -185,6 +183,7 @@ table {
 
 th {
 	border: 0;
+	border-left: 1px solid #333;
 	border-right: 1px solid #000;
 	background-color: #333;
 	background: -moz-linear-gradient(100% 100% 90deg, #333, #555);
@@ -196,31 +195,43 @@ th {
 
 td {
 	border: 0;
-	border-bottom: 1px solid #EEE;
+	border-bottom: 1px solid #DDD;
+	background-color: #FFF;
 }
 
+tr > td:first-child {
+	border-left: 1px solid #DDD;
+}
+
+tr > td:last-child {
+	border-right: 1px solid #DDD;
+}
 
 /* FORMS ============================================================================================================ */
 
 input, textarea {
-	border: 1px solid #CCC;
+	border: 0;
 	padding: 2px;
-	background-color: #FFF;
+	background-color: #F8F8F8;
 	font-family: Lucida Grande, sans-serif;
 }
 
 input[type="submit"], input[type="reset"] {
-	border: 0;
+	border: 1px solid #73AABF;
 	padding: 5px 15px;
-	background-color: #333;
-	background: -moz-linear-gradient(100% 100% 90deg, #333, #666);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#666), to(#333));
+	background-color: #537A8A;
+	background: -moz-linear-gradient(100% 100% 90deg, #537A8A, #6393A6);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6393A6), to(#537A8A));
 	font-weight: normal;
 	color: #FFF;
 	
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
+	
+/* 	-moz-box-shadow: 0 2px 5px #333; */
+/* 	-webkit-box-shadow: 0 2px 5px #333; */
+/* 	box-shadow: 0 2px 5px #333; */
 }
 
 input.short {
@@ -240,16 +251,20 @@ textarea {
 }
 
 input:focus, textarea:focus {
-	background-color: #FFE;
+	background-color: #FFF;
 }
 
-.warningMessage {
-	padding-left: 20px;
-	background: url(icons/error.png) left no-repeat;
+input.error, textarea.error {
+	border: 2px solid #C33;
 }
 
-.fieldError {
-	margin-top: 5px;
+.fieldLabel {
+	position: relative;
+	right: 40px;
+	text-align: right;
+}
+
+.errorMessage {
 	padding-left: 20px;
 	background: url(icons/error.png) left no-repeat;
 }
@@ -257,6 +272,17 @@ input:focus, textarea:focus {
 /* Login form */
 form[name="f"] table td {
 	border: 0;
+	background-color: #F8F8F8;
+}
+
+/* Login form */
+form[name="f"] input {
+	border: 1px solid #BBB;
+}
+
+/* Login form */
+form[name="f"] input[type="submit"], form[name="f"] input[type="reset"] {
+	border: 1px solid #6393A6;
 }
 
 
@@ -283,10 +309,10 @@ form[name="f"] table td {
 .panel {
 	margin: 20px 0;
 	padding: 30px 20px;
-	background-color: #DDD;
-	background: -moz-linear-gradient(100% 100% 90deg, #EEE, #DDD);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDD), to(#EEE));
-	color: #333;
+	background-color: #333;
+	background: -moz-linear-gradient(100% 100% 90deg, #555, #333);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#333), to(#555));
+	color: #EEE;
 	
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -297,12 +323,14 @@ form[name="f"] table td {
 	box-shadow: 0 2px 5px #666;
 }
 
+.panel a {
+	color: #FFF;
+}
+
 .pane {
 	margin: 20px 0;
-/* 	border: 1px solid #CCCBB4; */
 	border: 1px solid #CCC;
 	padding: 20px;
-/* 	background-color: #F7F6D9; */
 	background-color: #FFF;
 	color: #333;
 	
@@ -344,7 +372,7 @@ ul.actionBar a {
 .alert {
 	margin: 30px 0;
 	padding: 20px 20px 20px 40px;
-	background-position: 17px 24px;
+	background-position: 15px 24px;
 	background-repeat: no-repeat;
 	
 	-moz-border-radius: 10px;
@@ -357,14 +385,19 @@ ul.actionBar a {
 }
 
 .info.alert {
-	background-color: #FFC;
+	background-color: #788A5D;
 	background-image: url(icons/tick.png);
+	color: #EEE;
+}
+
+.info.alert a {
+	color: #FFF;
 }
 
 .warning.alert {
-	background-color: #333;
+	background-color: #D9D050;
 	background-image: url(icons/error.png);
-	color: #EEE;
+	color: #333;
 }
 
 .photoPanel {

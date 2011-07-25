@@ -19,8 +19,10 @@
 		<title><decorator:title /> - Spring in Practice</title>
 		<link rel="stylesheet" type="text/css" href="${baseGoogleUrl}/yui/2.9.0/build/reset-fonts-grids/reset-fonts-grids.css" />
 		<link rel="stylesheet" type="text/css" href="${baseGoogleUrl}/yui/2.9.0/build/base/base.css" />
+		<link rel="stylesheet" type="text/css" href="${baseGoogleUrl}/jqueryui/1.8.14/themes/vader/jquery-ui.css" />
 		<link rel="stylesheet" type="text/css" href="${sipCssUrl}" />
 		<script type="text/javascript" src="${baseGoogleUrl}/jquery/1.6.1/jquery.min.js"></script>
+		<script type="text/javascript" src="${baseGoogleUrl}/jqueryui/1.8.14/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="${sipJsUrl}"></script>
 		<decorator:head />
 	</head>
