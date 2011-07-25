@@ -122,7 +122,9 @@ ul#breadcrumbs > li:after {
 }
 
 #bookImg {
-	border: 1px solid #EEE;
+	-moz-box-shadow: 0 2px 5px #333;
+	-webkit-box-shadow: 0 2px 5px #333;
+	box-shadow: 0 2px 5px #333;
 }
 
 #bookLinks {
@@ -201,7 +203,7 @@ td {
 /* FORMS ============================================================================================================ */
 
 input, textarea {
-	border: 1px solid #666;
+	border: 1px solid #CCC;
 	padding: 2px;
 	background-color: #FFF;
 	font-family: Lucida Grande, sans-serif;
@@ -211,9 +213,9 @@ input[type="submit"], input[type="reset"] {
 	border: 0;
 	padding: 5px 15px;
 	background-color: #333;
-	background: -moz-linear-gradient(100% 100% 90deg, #333, #555);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#555), to(#333));
-	font-weight: bold;
+	background: -moz-linear-gradient(100% 100% 90deg, #333, #666);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#666), to(#333));
+	font-weight: normal;
 	color: #FFF;
 	
 	-moz-border-radius: 10px;
@@ -280,10 +282,11 @@ form[name="f"] table td {
 
 .panel {
 	margin: 20px 0;
-	padding: 20px;
-/* 	background-color: #D9C473; */
-	background-color: #EEE;
-	color: #000;
+	padding: 30px 20px;
+	background-color: #DDD;
+	background: -moz-linear-gradient(100% 100% 90deg, #EEE, #DDD);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDD), to(#EEE));
+	color: #333;
 	
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -296,10 +299,12 @@ form[name="f"] table td {
 
 .pane {
 	margin: 20px 0;
-	border: 1px solid #AAA;
+/* 	border: 1px solid #CCCBB4; */
+	border: 1px solid #CCC;
 	padding: 20px;
+/* 	background-color: #F7F6D9; */
 	background-color: #FFF;
-	color: #000;
+	color: #333;
 	
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
