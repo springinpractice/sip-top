@@ -2,6 +2,8 @@
 
 <c:url var="homeUrl" value="/home.html" />
 
-<div id="topNav">
-	<a href="${homeUrl}">Home</a>
+<div id="subhd">
+	<ul id="topNav">
+		<li><a href="${homeUrl}">Home</a></li>
+	</ul>
 </div>

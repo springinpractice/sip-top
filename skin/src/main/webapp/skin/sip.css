@@ -1,6 +1,7 @@
-/* Theme: http://kuler.adobe.com/#themeID/1404559 */
+/* Themes: http://kuler.adobe.com/#themeID/1404559 */
 
 html {
+	min-width: 900px;
 	background-color: #7C868A;
 }
 
@@ -52,11 +53,12 @@ body {
 
 #subhd {
     border-top: 1px solid #333;
-    padding: 10px 20px;
+    padding: 1px 0;
     background-color: #333;
-    color: #EEE;
 	background: -moz-linear-gradient(100% 100% 90deg, #333, #555);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#555), to(#333));
+    color: #EEE;
+    line-height: 1.0;
 }
 
 #subhd a {
@@ -68,6 +70,43 @@ body {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
+}
+
+#topNav {
+}
+
+#topNav ul {
+	margin: 0;
+	border: 0;
+	padding: 10px 0;
+	font-size: 0px;
+}
+
+#topNav li {
+	margin: 0;
+	border: 0;
+	display: inline;
+	list-style-type: none;
+	font-size: 15px;
+}
+
+#topNav a {
+	border: 0;
+	border-left: 1px solid #555;
+	border-right: 1px solid #333;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+
+#sessionInfo {
+	padding: 10px 20px;
+	text-align: right;
+}
+
+.regionInner {
+	width: 840px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 
 #bd {
@@ -120,20 +159,6 @@ ul#breadcrumbs > li:after {
     text-align: center;
 }
 
-.regionInner {
-	width: 840px;
-	margin: 0 auto;
-	padding: 0 20px;
-}
-
-#topNav {
-    text-align: left;
-}
-
-#sessionInfo {
-    text-align: right;
-}
-
 
 /* HEADERS ========================================================================================================== */
 
@@ -169,8 +194,8 @@ table {
 
 th {
 	border: 0;
-	border-left: 1px solid #333;
-	border-right: 1px solid #000;
+	border-left: 1px solid #555;
+	border-right: 1px solid #333;
 	background-color: #333;
 	background: -moz-linear-gradient(100% 100% 90deg, #333, #555);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#555), to(#333));
@@ -198,7 +223,7 @@ tr > td:last-child {
 input, textarea {
 	border: 0;
 	padding: 2px;
-	background-color: #F8F8F8;
+	background-color: #FFF;
 	font-family: Lucida Grande, sans-serif;
 }
 
@@ -237,7 +262,7 @@ textarea {
 }
 
 input:focus, textarea:focus {
-	background-color: #FFF;
+	background-color: #FFC;
 }
 
 input.error, textarea.error {
@@ -371,7 +396,7 @@ ul.actionBar a {
 }
 
 .info.alert {
-	background-color: #788A5D;
+	background-color: #627C16;
 	background-image: url(icons/tick.png);
 	color: #EEE;
 }
@@ -381,7 +406,7 @@ ul.actionBar a {
 }
 
 .warning.alert {
-	background-color: #D9D050;
+	background-color: #E8C750;
 	background-image: url(icons/error.png);
 	color: #333;
 }

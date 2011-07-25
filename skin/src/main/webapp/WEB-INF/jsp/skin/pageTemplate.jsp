@@ -34,9 +34,7 @@
 						<div id="hdTitle"></div>
 						<div id="hdAppName"><c:out value="${initParam.appName}" /></div>
 					</div>
-					<div id="subhd">
-						<%@ include file="/WEB-INF/jsp/skin/subhead.jspf" %>
-					</div>
+					<%@ include file="/WEB-INF/jsp/skin/subhead.jspf" %>
 				</div>
 			</div>
 			<div id="bd">
