@@ -57,6 +57,7 @@ body {
     background-color: #333;
 	background: -moz-linear-gradient(100% 100% 90deg, #333, #555);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#555), to(#333));
+	font-size: 15px;
     color: #EEE;
     line-height: 1.0;
 }
@@ -439,6 +440,7 @@ ul.actionBar a {
 }
 
 .photoItemTitle {
+	margin-top: 1px;
 	background-color: #333;
 	background: -moz-linear-gradient(100% 100% 90deg, #333, #555);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#555), to(#333));
