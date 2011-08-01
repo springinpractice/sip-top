@@ -219,6 +219,42 @@ tr > td:last-child {
 	border-right: 1px solid #DDD;
 }
 
+table.sortable .header {
+	cursor: pointer;
+}
+
+table.sortable .headerSortUp, table.sortable .headerSortDown {
+	padding-left: 22px;
+	background-color: #555;
+	background-repeat: no-repeat;
+	background-position: 2px center;
+}
+
+table.sortable .headerSortUp {
+	background-image: url(icons/sort-alphabet-descending.png);
+}
+
+table.sortable .headerSortUp.date {
+	background-image: url(icons/sort-date-descending.png);
+}
+
+table.sortable .headerSortUp.numeric {
+	background-image: url(icons/sort-number-descending.png);
+}
+
+table.sortable .headerSortDown {
+	background-image: url(icons/sort-alphabet.png);
+}
+
+table.sortable .headerSortDown.date {
+	background-image: url(icons/sort-date.png);
+}
+
+table.sortable .headerSortDown.numeric {
+	background-image: url(icons/sort-number.png);
+}
+
+
 /* FORMS ============================================================================================================ */
 
 input, textarea {

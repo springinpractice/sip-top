@@ -10,8 +10,10 @@
 
 <c:set var="baseGoogleUrl" value="http://ajax.googleapis.com/ajax/libs" />
 
+<c:url var="jqueryTablesorterJsUrl" value="/skin/scripts/jquery.tablesorter.min.js" />
+
 <c:url var="sipCssUrl" value="/skin/sip.css" />
-<c:url var="sipJsUrl" value="/skin/sip.js" />
+<c:url var="sipJsUrl" value="/skin/scripts/sip.js" />
 <c:url var="sipCoverImgUrl" value ="/skin/images/sipcover.jpg" />
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -23,6 +25,7 @@
 		<link rel="stylesheet" type="text/css" href="${sipCssUrl}" />
 		<script type="text/javascript" src="${baseGoogleUrl}/jquery/1.6.1/jquery.min.js"></script>
 		<script type="text/javascript" src="${baseGoogleUrl}/jqueryui/1.8.14/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="${jqueryTablesorterJsUrl}"></script>
 		<script type="text/javascript" src="${sipJsUrl}"></script>
 		<decorator:head />
 	</head>
