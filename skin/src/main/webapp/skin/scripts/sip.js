@@ -1,5 +1,4 @@
 $(function() {
-	$(function() { $(".sortable").tablesorter(); });
+	$(".alert").hide().slideDown();
 	$("form.main :input:not(:hidden, :submit):first").focus();
-	$('.alert').hide().slideDown();
 });
