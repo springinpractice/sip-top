@@ -510,3 +510,7 @@ ul.actionBar a {
 .email.icon { background-image: url(icons/email.png); }
 .table.icon { background-image: url(icons/table.png); }
 .user.icon { background-image: url(icons/user.png); }
+.vcard.icon { background-image: url(icons/vcard.png); }
+.vcardAdd.icon { background-image: url(icons/vcard_add.png); }
+.vcardDelete.icon { background-image: url(icons/vcard_delete.png); }
+.vcardEdit.icon { background-image: url(icons/vcard_edit.png); }
