@@ -311,8 +311,6 @@ input.error, textarea.error {
 }
 
 .fieldLabel {
-	position: relative;
-	right: 40px;
 	text-align: right;
 }
 
