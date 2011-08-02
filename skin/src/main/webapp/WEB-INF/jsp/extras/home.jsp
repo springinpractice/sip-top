@@ -3,10 +3,10 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>Welcome to SiP University</title>
+		<title>Welcome</title>
 	</head>
 	<body>
-		<h1>Welcome to SiP University</h1>
+		<h1>Welcome</h1>
 		<jsp:include page="/WEB-INF/jsp/extras/photoPanel.jspf" />
 	</body>
 </html>
