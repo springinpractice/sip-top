@@ -1,4 +1,5 @@
 /* Themes: http://kuler.adobe.com/#themeID/1404559 */
+@import url(http://fonts.googleapis.com/css?family=Mako);
 
 html {
 	min-width: 900px;
@@ -30,7 +31,9 @@ body {
 }
 
 #hd, #subhd, #bd, #ft {
-	font-family: Lucida Grande, sans-serif;
+/* 	font-family: Lucida Grande, sans-serif; */
+	font-family: Mako, sans-serif;
+	font-size: 108%;
 }
 
 #hd {
@@ -272,14 +275,15 @@ input[type="submit"], input[type="reset"] {
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6393A6), to(#537A8A));
 	font-weight: normal;
 	color: #FFF;
+	cursor: pointer;
 	
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
 	
-/* 	-moz-box-shadow: 0 2px 5px #333; */
-/* 	-webkit-box-shadow: 0 2px 5px #333; */
-/* 	box-shadow: 0 2px 5px #333; */
+	-moz-box-shadow: 0 0 4px #222;
+	-webkit-box-shadow: 0 0 4px #222;
+	box-shadow: 0 0 4px #222;
 }
 
 input.short {
