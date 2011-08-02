@@ -31,9 +31,8 @@ body {
 }
 
 #hd, #subhd, #bd, #ft {
-/* 	font-family: Lucida Grande, sans-serif; */
 	font-family: Mako, sans-serif;
-	font-size: 108%;
+	font-size: 116%;
 }
 
 #hd {
@@ -137,7 +136,6 @@ ul#breadcrumbs > li:after {
 #ft {
 	border-top: 4px solid #505759;
 	text-align: left;
-	font-size: 108%;
 	color: #E5F8FF;
 }
 
@@ -264,7 +262,7 @@ input, textarea {
 	border: 0;
 	padding: 2px;
 	background-color: #FFF;
-	font-family: Lucida Grande, sans-serif;
+	font-family: Mako, sans-serif;
 }
 
 input[type="submit"], input[type="reset"] {
