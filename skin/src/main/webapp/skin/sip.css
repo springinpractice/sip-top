@@ -340,15 +340,15 @@ form[name="f"] input[type="submit"], form[name="f"] input[type="reset"] {
 }
 
 .grid > .gridRow {
-	margin: 15px 0;
+	margin: 20px 0;
 }
 
 .grid > .gridRow:first-child {
-	margin: 0 0 10px;
+	margin: 0 0 20px;
 }
 
 .grid > .gridRow:last-child {
-	margin: 10px 0 0;
+	margin: 20px 0 0;
 }
 
 
