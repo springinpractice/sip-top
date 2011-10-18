@@ -36,7 +36,7 @@ Spring in Practice top-level POM. Chapter-specific POMs must define the chapter.
 		<spring.integration.version>2.0.4.RELEASE</spring.integration.version>
 		<spring.security.version>3.0.3.RELEASE</spring.security.version>
 		<aspectj.version>1.6.8.RELEASE</aspectj.version>
-		<slf4j.version>1.5.10</slf4j.version>
+		<slf4j.version>1.6.1</slf4j.version>
 		<javamail.version>1.4.1</javamail.version>
 		
 		<!-- Prevent chirping about platform-dependent builds. -->
@@ -485,10 +485,12 @@ Spring in Practice top-level POM. Chapter-specific POMs must define the chapter.
 			<groupId>org.hibernate</groupId>
 			<artifactId>com.springsource.org.hibernate.validator</artifactId>
 		</dependency>
+		<!--
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>com.springsource.org.hibernate.search</artifactId>
 		</dependency>
+		-->
 		
 		<!-- Logging dependencies -->
 		<dependency>
