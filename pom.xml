@@ -206,6 +206,11 @@ Spring in Practice top-level POM. Chapter-specific POMs must define the chapter.
 				<artifactId>org.springframework.web.servlet</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-jpa</artifactId>
+				<version>1.0.1.RELEASE</version>
+			</dependency>
 			
 			<!-- Spring Integration dependencies -->
 			<!--
@@ -327,27 +332,30 @@ Spring in Practice top-level POM. Chapter-specific POMs must define the chapter.
 				<artifactId>com.springsource.org.aspectj.weaver</artifactId>
 				<version>${aspectj.version}</version>
 			</dependency>
-
-			<!-- Hibernate dependencies -->
+			
+			<!-- Core includes Hibernate Annotations and Hibernate EntityManager -->
 			<dependency>
 				<groupId>org.hibernate</groupId>
-				<artifactId>com.springsource.org.hibernate</artifactId>
-				<version>3.3.2.GA</version>
+				<artifactId>hibernate-core</artifactId>
+				<version>3.6.8.Final</version>
+			</dependency>
+			
+			<!-- EntityManager has HibernatePersistence provider -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>3.6.8.Final</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-search</artifactId>
+				<version>3.4.1.Final</version>
 			</dependency>
 			<dependency>
 				<groupId>org.hibernate</groupId>
-				<artifactId>com.springsource.org.hibernate.annotations</artifactId>
-				<version>3.4.0.GA</version>
-			</dependency>
-			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>com.springsource.org.hibernate.search</artifactId>
-				<version>3.1.1.GA</version>
-			</dependency>
-			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>com.springsource.org.hibernate.validator</artifactId>
-				<version>4.1.0.GA</version>
+				<artifactId>hibernate-validator</artifactId>
+				<version>4.2.0.Final</version>
 			</dependency>
 			
 			<!-- Data dependencies -->
@@ -485,14 +493,8 @@ Spring in Practice top-level POM. Chapter-specific POMs must define the chapter.
 		<!-- Hibernate dependencies -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
-			<artifactId>com.springsource.org.hibernate.validator</artifactId>
+			<artifactId>hibernate-validator</artifactId>
 		</dependency>
-		<!--
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>com.springsource.org.hibernate.search</artifactId>
-		</dependency>
-		-->
 		
 		<!-- Logging dependencies -->
 		<dependency>
@@ -685,28 +687,13 @@ Spring in Practice top-level POM. Chapter-specific POMs must define the chapter.
 			<url>http://maven.springframework.org/external</url>
 		</repository>
 		
-		<!-- Legacy -->
-		<!--
-		<repository>
-			<id>com.springsource.repository.bundles.external</id>
-			<name>SpringSource EBR - External</name>
-			<url>http://repository.springsource.com/maven/bundles/external</url>
-		</repository>
-		<repository>
-			<id>com.springsource.repository.bundles.release</id>
-			<name>SpringSource EBR - Release</name>
-			<url>http://repository.springsource.com/maven/bundles/release</url>
-		</repository>
-		-->
-		
 		<!-- JBoss/Hibernate dependencies (more up-to-date than SpringSource EBR) -->
-		<!--
 		<repository>
 			<id>repository.jboss.org</id>
 			<name>Public JBoss Repository Group</name>
-			<url>https://repository.jboss.org/nexus/content/groups/public-jboss</url>
+<!-- 			<url>https://repository.jboss.org/nexus/content/groups/public-jboss</url> -->
+			<url>https://repository.jboss.org/nexus/content/groups/public</url>
 		</repository>
-		-->
 		
 		<!-- htmlcleaner dependency (chapter 9) -->
 		<repository>

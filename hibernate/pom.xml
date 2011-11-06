@@ -66,11 +66,7 @@ Author web site - http://wheelersoftware.com/
 		<!-- Hibernate dependencies -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
-			<artifactId>com.springsource.org.hibernate</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>com.springsource.org.hibernate.annotations</artifactId>
+			<artifactId>hibernate-core</artifactId>
 		</dependency>
 		
 		<!-- Data dependencies -->

@@ -13,7 +13,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.util.ReflectionUtils;
@@ -47,6 +46,10 @@ public abstract class AbstractHbnDao<T extends Object> implements Dao<T> {
 	
 	private String getDomainClassName() { return getDomainClass().getName(); }
 	
+	/* (non-Javadoc)
+	 * @see com.springinpractice.dao.Dao#create(java.lang.Object)
+	 */
+	@Override
 	public void create(T t) {
 		
 		// If there's a setDateCreated() method, then set the date.
@@ -63,11 +66,19 @@ public abstract class AbstractHbnDao<T extends Object> implements Dao<T> {
 		getSession().save(t);
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.springinpractice.dao.Dao#get(java.io.Serializable)
+	 */
+	@Override
 	@SuppressWarnings("unchecked")
 	public T get(Serializable id) {
 		return (T) getSession().get(getDomainClass(), id);
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.springinpractice.dao.Dao#load(java.io.Serializable)
+	 */
+	@Override
 	@SuppressWarnings("unchecked")
 	public T load(Serializable id) {
 		return (T) getSession().load(getDomainClass(), id);
@@ -75,26 +86,52 @@ public abstract class AbstractHbnDao<T extends Object> implements Dao<T> {
 	
 	@SuppressWarnings("unchecked")
 	public List<T> getAll() {
-		Query q = getSession().createQuery("from " + getDomainClassName());
-		return q.list();
+		return getSession()
+			.createQuery("from " + getDomainClassName())
+			.list();
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.springinpractice.dao.Dao#update(java.lang.Object)
+	 */
+	@Override
 	public void update(T t) { getSession().update(t); }
 	
+	/* (non-Javadoc)
+	 * @see com.springinpractice.dao.Dao#delete(java.lang.Object)
+	 */
+	@Override
 	public void delete(T t) { getSession().delete(t); }
 	
+	/* (non-Javadoc)
+	 * @see com.springinpractice.dao.Dao#deleteById(java.io.Serializable)
+	 */
+	@Override
 	public void deleteById(Serializable id) { delete(load(id)); }
 	
+	/* (non-Javadoc)
+	 * @see com.springinpractice.dao.Dao#deleteAll()
+	 */
+	@Override
 	public void deleteAll() {
-		Query q = getSession().createQuery("delete " + getDomainClassName());
-		q.executeUpdate();
+		getSession()
+			.createQuery("delete " + getDomainClassName())
+			.executeUpdate();
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.springinpractice.dao.Dao#count()
+	 */
+	@Override
 	public long count() {
-		Query q = getSession()
-			.createQuery("select count(*) from " + getDomainClassName());
-		return (Long) q.uniqueResult();
+		return (Long) getSession()
+			.createQuery("select count(*) from " + getDomainClassName())
+			.uniqueResult();
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.springinpractice.dao.Dao#exists(java.io.Serializable)
+	 */
+	@Override
 	public boolean exists(Serializable id) { return (get(id) != null); }
 }
