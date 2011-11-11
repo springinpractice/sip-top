@@ -504,6 +504,7 @@ ul.actionBar a {
 .commentAdd.icon { background-image: url(icons/comment_add.png); }
 .commentDelete.icon { background-image: url(icons/comment_delete.png); }
 .commentEdit.icon { background-image: url(icons/comment_edit.png); }
+.compress.icon { background-image: url(icons/compress.png); }
 .date.icon { background-image: url(icons/date.png); }
 .email.icon { background-image: url(icons/email.png); }
 .table.icon { background-image: url(icons/table.png); }
