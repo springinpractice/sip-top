@@ -258,16 +258,16 @@ table.sortable .headerSortDown.numeric {
 
 /* FORMS ============================================================================================================ */
 
-input, textarea {
+input, textarea, button {
 	border: 0;
 	padding: 2px;
 	background-color: #FFF;
 	font-family: Mako, sans-serif;
 }
 
-input[type="submit"], input[type="reset"] {
+input[type="submit"], input[type="reset"], input[type="button"], button {
 	border: 1px solid #73AABF;
-	padding: 5px 15px;
+	padding: 3px 10px;
 	background-color: #537A8A;
 	background: -moz-linear-gradient(100% 100% 90deg, #537A8A, #6393A6);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6393A6), to(#537A8A));
@@ -282,6 +282,12 @@ input[type="submit"], input[type="reset"] {
 	-moz-box-shadow: 0 0 4px #222;
 	-webkit-box-shadow: 0 0 4px #222;
 	box-shadow: 0 0 4px #222;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, button:hover {
+	background-color: #6291A3;
+	background: -moz-linear-gradient(100% 100% 90deg, #6291A3, #73AABF);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#73AABF), to(#6291A3));
 }
 
 input.short {
@@ -442,7 +448,7 @@ ul.actionBar a {
 	color: #FFF;
 }
 
-.warning.alert {
+.warning.alert, .error.alert {
 	background-color: #E8D963;
 	background-image: url(icons/error.png);
 	color: #333;
