@@ -87,13 +87,13 @@ Spring in Practice top-level POM. Chapter-specific POMs must define the chapter.
 				<groupId>javax.servlet</groupId>
 				<artifactId>com.springsource.javax.servlet</artifactId>
 				<version>2.5.0</version>
-				<scope>provided</scope>
+<!-- 				<scope>provided</scope> -->
 			</dependency>
 			<dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>com.springsource.javax.servlet.jsp</artifactId>
 				<version>2.1.0</version>
-				<scope>provided</scope>
+<!-- 				<scope>provided</scope> -->
 			</dependency>
 			<dependency>
 				<groupId>javax.servlet</groupId>
