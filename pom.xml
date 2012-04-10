@@ -422,12 +422,6 @@ Spring in Practice top-level POM. Chapter-specific POMs must define the chapter.
 				<version>1.0.0</version>
 			</dependency>
 			<dependency>
-				<groupId>net.sourceforge.cglib</groupId>
-				<artifactId>com.springsource.net.sf.cglib</artifactId>
-				<version>2.2.0</version>
-				<scope>runtime</scope>
-			</dependency>
-			<dependency>
 				<groupId>net.sourceforge.ehcache</groupId>
 				<artifactId>com.springsource.net.sf.ehcache</artifactId>
 				<version>1.6.2</version>
@@ -451,6 +445,20 @@ Spring in Practice top-level POM. Chapter-specific POMs must define the chapter.
 				<artifactId>htmlcleaner</artifactId>
 				<version>2.1</version>
 			</dependency> 
+			
+			<!-- For Hibernate -->
+			<dependency>
+				<groupId>cglib</groupId>
+				<artifactId>cglib-nodep</artifactId>
+				<version>2.2.2</version>
+				<scope>runtime</scope>
+			</dependency>
+			<dependency>
+				<groupId>javassist</groupId>
+				<artifactId>javassist</artifactId>
+				<version>3.12.1.GA</version>
+				<scope>runtime</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	
