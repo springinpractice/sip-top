@@ -394,7 +394,7 @@ Spring in Practice top-level POM. Chapter-specific POMs must define the chapter.
 			<dependency>
 				<groupId>org.junit</groupId>
 				<artifactId>com.springsource.org.junit</artifactId>
-				<version>4.8.1</version>
+				<version>4.10.0</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
