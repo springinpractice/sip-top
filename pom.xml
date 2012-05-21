@@ -30,6 +30,7 @@
 		<spring.version>3.1.1.RELEASE</spring.version>
 		<spring.integration.version>2.0.4.RELEASE</spring.integration.version>
 		<spring.security.version>3.0.3.RELEASE</spring.security.version>
+		<surefire.version>2.12</surefire.version>
 		
 		<!-- Prevent chirping about platform-dependent builds. -->
 		<!-- See http://docs.codehaus.org/display/MAVENUSER/POM+Element+for+Source+File+Encoding -->
@@ -619,7 +620,7 @@
 				
 				<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.5</version>
+					<version>${surefire.version}</version>
 					<configuration>
 						<includes>
 							<include>**/*Tests.java</include>
@@ -627,7 +628,7 @@
 						
 						<!-- Required because SpringSource EBR renames testing artifact. -->
 						<!-- See https://issuetracker.springsource.com/browse/EBR-220 -->
-						<junitArtifactName>org.junit:com.springsource.org.junit</junitArtifactName>
+<!-- 						<junitArtifactName>org.junit:com.springsource.org.junit</junitArtifactName> -->
 					</configuration>
 				</plugin>
 				
