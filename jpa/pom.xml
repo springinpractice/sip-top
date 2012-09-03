@@ -1,36 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	
 	<modelVersion>4.0.0</modelVersion>
-	
 	<parent>
 		<groupId>com.springinpractice</groupId>
 		<artifactId>com.springinpractice.top</artifactId>
 		<version>1.0-RELEASE</version>
 	</parent>
 	
-	<artifactId>com.springinpractice.deps-hibernate</artifactId>
+	<artifactId>com.springinpractice.deps-jpa</artifactId>
 	<packaging>pom</packaging>
 	
-	<name>Spring in Practice Hibernate POM</name>
-	<description>POM to group Hibernate and related dependencies.</description>
+	<name>Spring in Practice JPA POM</name>
+	<description>POM to group Spring Data JPA and related dependencies.</description>
 	<url>http://springinpractice.com/</url>
 	
 	<dependencies>
 	
-		<!-- JavaEE dependencies -->
-		<dependency>
-			<groupId>javax.persistence</groupId>
-			<artifactId>com.springsource.javax.persistence</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>javax.transaction</groupId>
-			<artifactId>jta</artifactId>
-		</dependency>
-		
-		<!-- Spring dependencies -->
+		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>org.springframework.orm</artifactId>
@@ -40,13 +29,23 @@
 			<artifactId>org.springframework.transaction</artifactId>
 		</dependency>
 		
-		<!-- Hibernate dependencies -->
+		<!-- Spring Data JPA -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-commons-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+        </dependency>
+		
+		<!-- Need this to use Hibernate as a JPA persistence provider -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
+			<artifactId>hibernate-entitymanager</artifactId>
 		</dependency>
 		
-		<!-- Data dependencies -->
+		<!-- For JDBC -->
 		<dependency>
 			<groupId>com.mysql.jdbc</groupId>
 			<artifactId>com.springsource.com.mysql.jdbc</artifactId>
@@ -54,16 +53,6 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>com.springsource.org.apache.commons.dbcp</artifactId>
-		</dependency>
-		
-		<!-- Supporting dependencies -->
-		<dependency>
-			<groupId>cglib</groupId>
-			<artifactId>cglib-nodep</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>javassist</groupId>
-			<artifactId>javassist</artifactId>
 		</dependency>
 	</dependencies>
 </project>
