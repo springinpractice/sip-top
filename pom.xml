@@ -23,12 +23,14 @@
 	<properties>
 		<aspectj.version>1.6.8.RELEASE</aspectj.version>
 		<hamcrest.version>1.1</hamcrest.version>
-		<javamail.version>1.4.1</javamail.version>
+		<jackson.version>1.9.9</jackson.version>
+		<javamail.version>1.4.5</javamail.version>
 		<jta.version>1.1</jta.version>
 		<junit.version>4.10</junit.version>
 		<mockito.version>1.9.0</mockito.version>
 		<slf4j.version>1.6.4</slf4j.version>
 		<spring.version>3.1.2.RELEASE</spring.version>
+		<spring.amqp.version>1.0.0.RELEASE</spring.amqp.version>
 		<spring.data.commons.version>1.3.0.RELEASE</spring.data.commons.version>
 		<spring.data.jpa.version>1.1.1.RELEASE</spring.data.jpa.version>
 		<spring.integration.version>2.1.3.RELEASE</spring.integration.version>
@@ -72,7 +74,7 @@
 			</dependency>
 			<dependency>
 				<groupId>javax.mail</groupId>
-				<artifactId>com.springsource.javax.mail</artifactId>
+				<artifactId>mail</artifactId>
 				<version>${javamail.version}</version>
 				<scope>provided</scope>
 			</dependency>
@@ -294,6 +296,27 @@
 				<groupId>org.springframework.integration</groupId>
 				<artifactId>spring-integration-core</artifactId>
 				<version>${spring.integration.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-aop</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-context</artifactId>
+				</exclusion>
+			</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.integration</groupId>
+				<artifactId>spring-integration-amqp</artifactId>
+				<version>${spring.integration.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring-tx</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework.integration</groupId>
@@ -334,6 +357,23 @@
 <!-- 				<artifactId>spring-integration-ws</artifactId> -->
 <!-- 				<version>${spring.integration.version}</version> -->
 <!-- 			</dependency> -->
+
+			<!-- Spring AMQP -->
+			<dependency>
+				<groupId>org.springframework.amqp</groupId>
+				<artifactId>spring-rabbit</artifactId>
+				<version>${spring.amqp.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring-core</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring-tx</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
 		
 			<!-- Spring Security dependencies -->
 			<dependency>
@@ -498,6 +538,11 @@
 				<groupId>net.sourceforge.ehcache</groupId>
 				<artifactId>com.springsource.net.sf.ehcache</artifactId>
 				<version>1.6.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.codehaus.jackson</groupId>
+				<artifactId>jackson-mapper-asl</artifactId>
+				<version>${jackson.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.joda</groupId>
@@ -789,7 +834,7 @@
 			<url>http://repository.springsource.com/maven/bundles/external</url>
 		</repository>
 		
-		<!-- Spring repos (spring-* dependencies)-->
+		<!-- Spring repos (spring-* dependencies; e.g., Spring Integration) -->
 		<repository>
 			<id>spring-release</id>
 			<name>Spring Framework Maven Release Repository</name>
@@ -831,7 +876,7 @@
 			<id>williewheeler</id>
 			<name>Willie Wheeler</name>
 			<email>willie.wheeler@gmail.com</email>
-			<url>http://wheelersoftware.com/</url>
+			<url>http://springinpractice.com/</url>
 		</developer>
 		<developer>
 			<id>johnwheeler</id>
