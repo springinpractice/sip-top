@@ -33,6 +33,8 @@
 		<spring.amqp.version>1.0.0.RELEASE</spring.amqp.version>
 		<spring.data.commons.version>1.3.0.RELEASE</spring.data.commons.version>
 		<spring.data.jpa.version>1.1.1.RELEASE</spring.data.jpa.version>
+		<spring.data.mongodb.version>1.0.3.RELEASE</spring.data.mongodb.version>
+		<spring.data.rest.webmvc.version>1.0.0.RC3</spring.data.rest.webmvc.version>
 		<spring.integration.version>2.1.3.RELEASE</spring.integration.version>
 		<spring.security.version>3.0.3.RELEASE</spring.security.version>
 		<surefire.version>2.12</surefire.version>
@@ -264,8 +266,13 @@
 			</dependency>
 			<dependency>
 				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-rest-webmvc</artifactId>
+				<version>${spring.data.rest.webmvc.version}</version>
+			</dependency> 
+			<dependency>
+				<groupId>org.springframework.data</groupId>
 				<artifactId>spring-data-mongodb</artifactId>
-				<version>1.0.0.M4</version>
+				<version>${spring.data.mongodb.version}</version>
 			</dependency>
 			
 			<!-- Spring Integration dependencies -->
@@ -837,25 +844,19 @@
 		<!-- Spring repos (spring-* dependencies; e.g., Spring Integration) -->
 		<repository>
 			<id>spring-release</id>
-			<name>Spring Framework Maven Release Repository</name>
-			<url>http://maven.springframework.org/release</url>
+			<name>Spring Maven Release Repository</name>
+			<url>http://repo.springsource.org/libs-release</url>
 		</repository> 
 		<repository>
 			<id>spring-milestone</id>
-			<name>Spring Framework Maven Milestone Repository</name>
-			<url>http://maven.springframework.org/milestone</url>
-		</repository>
-		<repository>
-			<id>spring-external</id>
-			<name>Spring Framework Maven External Repository</name>
-			<url>http://maven.springframework.org/external</url>
+			<name>Spring Maven Milestone Repository</name>
+			<url>http://repo.springsource.org/libs-milestone</url>
 		</repository>
 		
 		<!-- JBoss/Hibernate dependencies (more up-to-date than SpringSource EBR) -->
 		<repository>
 			<id>jboss</id>
 			<name>Public JBoss Repository Group</name>
-<!-- 			<url>https://repository.jboss.org/nexus/content/groups/public-jboss</url> -->
 			<url>https://repository.jboss.org/nexus/content/groups/public</url>
 		</repository>
 		
