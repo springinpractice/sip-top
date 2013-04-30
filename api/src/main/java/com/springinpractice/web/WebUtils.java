@@ -1,7 +1,9 @@
 /* 
  * Copyright (c) 2013 Manning Publications Co.
  * 
- * Book web site: http://springinpractice.com/
+ * Book: http://manning.com/wheeler/
+ * Blog: http://springinpractice.com/
+ * Code: https://github.com/springinpractice
  */
 package com.springinpractice.web;
 
