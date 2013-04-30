@@ -1,18 +1,13 @@
 /* 
- * $Id$
+ * Copyright (c) 2013 Manning Publications Co.
  * 
- * Copyright (c) 2010 Manning Publications Co.
- * 
- * Book web site   - http://www.manning.com/wheeler/
- * Book blog       - http://springinpractice.com/
- * Author web site - http://wheelersoftware.com/
+ * Book web site: http://springinpractice.com/
  */
 package com.springinpractice.web;
 
 import org.springframework.util.StringUtils;
 
 /**
- * @version $Id$
  * @author Willie Wheeler (willie.wheeler@gmail.com)
  */
 public final class WebUtils {

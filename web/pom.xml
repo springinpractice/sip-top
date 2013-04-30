@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-===============================================================================
-$Id: pom.xml 8 2011-02-01 08:24:14Z  $
+========================================================================================================================
+pom.xml
 
-Copyright (c) 2010 Manning Publications Co.
+Copyright (c) 2013 Manning Publications Co.
 
 Willie Wheeler (willie.wheeler@gmail.com)
 
-Book web site   - http://www.manning.com/wheeler/
-Book blog       - http://springinpractice.com/
-Author web site - http://wheelersoftware.com/
-===============================================================================
+Blog   : http://springinpractice.com/
+GitHub : https://github.com/organizations/springinpractice
+Book   : http://manning.com/wheeler/
+Forum  : http://www.manning-sandbox.com/forum.jspa?forumID=503
+========================================================================================================================
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
