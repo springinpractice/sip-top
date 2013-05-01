@@ -14,7 +14,7 @@
 
 <c:url var="sipCssUrl" value="/skin/sip.css" />
 <c:url var="sipJsUrl" value="/skin/scripts/sip.js" />
-<c:url var="sipCoverImgUrl" value ="/skin/images/sipcover.jpg" />
+<c:url var="sipCoverImgUrl" value ="/skin/images/sip-cover.png" />
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
@@ -57,12 +57,12 @@
 							<div>
 								<a href="http://www.manning.com/wheeler/" title="Discuss the book with the authors and other readers">Spring in Practice @ Manning</a><br />
 								<a href="http://springinpractice.com/" title="The book's blog, with elaborations, corrections and more">Spring in Practice Blog</a><br />
-								<a href="http://wheelersoftware.com/articles/index.html" title="Java & Spring tutorials by Willie Wheeler">Tutorials @ Wheeler Software</a><br />
+								<a href="https://github.com/springinpractice" title="Source code">Source Code</a><br />
 							</div>
 						</div>
 					</div>
 					<div id="legal">
-						Copyright &copy; 2008-2011 Manning Publications Co.
+						Copyright &copy; 2013 Manning Publications Co.
 					</div>
 				</div>
 			</div>
