@@ -124,11 +124,12 @@ Code: https://github.com/springinpractice
 				<version>${jta.version}</version>
 				<scope>runtime</scope>
 			</dependency>
-			<dependency>
-				<groupId>javax.validation</groupId>
-				<artifactId>validation-api</artifactId>
-				<version>${validation.version}</version>
-			</dependency>
+<!-- 			dependancy moved in <dependancies></dependancies> -->
+<!-- 			<dependency> -->
+<!-- 				<groupId>javax.validation</groupId> -->
+<!-- 				<artifactId>validation-api</artifactId> -->
+<!-- 				<version>${validation.version}</version> -->
+<!-- 			</dependency> -->
 			
 			<!-- Apache dependencies -->
 			<dependency>
@@ -606,6 +607,11 @@ Code: https://github.com/springinpractice
 	<dependencies>
 		
 		<!-- JavaEE dependencies -->
+		<dependency>
+				<groupId>javax.validation</groupId>
+				<artifactId>validation-api</artifactId>
+				<version>${validation.version}</version>
+			</dependency>
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>com.springsource.javax.inject</artifactId>
